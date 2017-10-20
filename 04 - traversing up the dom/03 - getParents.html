@@ -60,7 +60,7 @@
 
 		<!-- Scripts -->
 		<script>
-			var elem = document.querySelector( '#d3' );
+			var elem = document.querySelector('#d3');
 
 			/**
 			 * Get all of an element's parent elements up the DOM tree
@@ -68,7 +68,7 @@
 			 * @param  {String} selector Selector to match against [optional]
 			 * @return {Array}           The parent elements
 			 */
-			var getParents = function ( elem, selector ) {
+			var getParents = function (elem, selector) {
 
 				// Element.matches() polyfill
 				if (!Element.prototype.matches) {
@@ -90,15 +90,15 @@
 				var parents = [];
 
 				// Get matching parent elements
-				for ( ; elem && elem !== document; elem = elem.parentNode ) {
+				for (; elem && elem !== document; elem = elem.parentNode) {
 
 					// Add matching parents to array
-					if ( selector ) {
-						if ( elem.matches( selector ) ) {
-							parents.push( elem );
+					if (selector) {
+						if (elem.matches(selector)) {
+							parents.push(elem);
 						}
 					} else {
-						parents.push( elem );
+						parents.push(elem);
 					}
 
 				}
@@ -108,11 +108,11 @@
 			};
 
 			// Get all parents (excluding the element itself)
-			var parents = getParents( elem.parentNode );
+			var parents = getParents(elem.parentNode);
 			console.log(parents);
 
 			// Get parents with a class of `.wrapper`
-			var getWrapperParents = getParents( elem, '.wrapper' );
+			var getWrapperParents = getParents(elem, '.wrapper');
 			console.log(getWrapperParents);
 		</script>
 	</body>

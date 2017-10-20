@@ -31,32 +31,32 @@
 			 * @param  {Node}    elem The element
 			 * @return {Boolean}      Returns true if element is in the viewport
 			 */
-			var isInViewport = function ( elem ) {
+			var isInViewport = function (elem) {
 			    var distance = elem.getBoundingClientRect();
 			    return (
 			        distance.top >= 0 &&
 			        distance.left >= 0 &&
 			        distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
 			        distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-			    );
+			   );
 			};
 
 			// The element to check
-			var elem = document.querySelector( '#find-me' );
+			var elem = document.querySelector('#find-me');
 
 			// On scroll, check to see if our element is in the viewport
 			var timeout;
-			window.addEventListener('scroll', function ( event ) {
+			window.addEventListener('scroll', function (event) {
 				// If timer is null, reset it to 66ms and run your functions.
 				// Otherwise, wait until timer is cleared
-				if ( !timeout ) {
+				if (!timeout) {
 					timeout = setTimeout(function() {
 
 						// Reset timeout
 						timeout = null;
 
 						// Run our resize functions
-						if ( isInViewport( elem ) ) {
+						if (isInViewport(elem)) {
 							console.log('In the viewport!');
 						} else {
 							console.log('No yet... =(');

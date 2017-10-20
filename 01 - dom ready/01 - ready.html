@@ -44,22 +44,22 @@
 		<!-- Scripts -->
 		<script>
 			 // Get divs with a [data-snack] attribute of chips
-			console.log( document.querySelectorAll( 'div' ) );
+			console.log(document.querySelectorAll('div'));
 
 			// Run event after DOM is ready
 			// @param  {Function} fn Callback function
-			var ready = function ( fn ) {
+			var ready = function (fn) {
 
 				// Sanity check
-				if ( typeof fn !== 'function' ) return;
+				if (typeof fn !== 'function') return;
 
 				// If document is already loaded, run method
-				if ( document.readyState === 'interactive' || document.readyState === 'complete' ) {
+				if (document.readyState === 'interactive' || document.readyState === 'complete') {
 					return fn();
 				}
 
 				// Otherwise, wait until document is loaded
-				document.addEventListener( 'DOMContentLoaded', fn, false );
+				document.addEventListener('DOMContentLoaded', fn, false);
 
 			};
 
@@ -67,7 +67,7 @@
 			ready(function() {
 				// Get divs with a [data-snack] attribute of chips,
 				// now that the DOM is loaded
-				console.log( document.querySelectorAll( 'div' ) );
+				console.log(document.querySelectorAll('div'));
 			});
 
 		</script>

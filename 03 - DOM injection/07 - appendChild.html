@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Removing an element from the DOM</title>
+		<title>appendChild()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Styles -->
@@ -20,20 +20,28 @@
 				margin: 0 0 1em;
 				padding: 0.5em 1em;
 			}
+
+			div div {
+				background-color: #e5e5e5;
+			}
 		</style>
 	</head>
 
 	<body>
 
-		<div><p>Hello, world!</p></div>
+		<div id="some-element"><h1>Hello, world!</h1></div>
 
 		<!-- Scripts -->
 		<script>
-			// Get the element you want to remove
-			var elem = document.querySelector( 'div' );
+			// Create a new element
+			var newNode = document.createElement('div');
+			newNode.innerHTML = 'I am new here!';
 
-			// Remove it from the DOM
-			elem.parentNode.removeChild( elem );
+			// Get the reference node
+			var referenceNode = document.querySelector('#some-element');
+
+			// Insert the new node after the last element in the parent node
+			referenceNode.appendChild(newNode);
 		</script>
 	</body>
 </html>

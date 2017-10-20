@@ -60,23 +60,23 @@
 		<!-- Scripts -->
 		<script>
 			// Get all child nodes
-			var wrapper = document.querySelector( '.wrapper' );
+			var wrapper = document.querySelector('.wrapper');
 			var wrapperChildren = wrapper.children;
 			console.log(wrapperChildren);
 
 			// Get all child nodes
-			var elem = document.querySelector( '#d' );
+			var elem = document.querySelector('#d');
 			var elemChildren = elem.children;
 			console.log(elemChildren);
 
 			// Filter child nodes by type
 			var filtered = [];
-			for ( var i = 0; i < elemChildren.length; i++ ) {
-				if ( elemChildren[i].tagName && elemChildren[i].tagName.toLowerCase() === 'div' ) {
-					filtered.push( elemChildren[i] );
+			for (var i = 0; i < elemChildren.length; i++) {
+				if (elemChildren[i].tagName && elemChildren[i].tagName.toLowerCase() === 'div') {
+					filtered.push(elemChildren[i]);
 				}
 			}
-			console.log( filtered );
+			console.log(filtered);
 		</script>
 	</body>
 </html>
