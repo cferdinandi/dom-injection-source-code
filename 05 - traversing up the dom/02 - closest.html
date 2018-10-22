@@ -60,20 +60,6 @@
 
 		<!-- Scripts -->
 		<script>
-			// .closest() polyfill
-			if (window.Element && !Element.prototype.closest) {
-				Element.prototype.closest = function(s) {
-					var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-						i,
-						el = this;
-					do {
-						i = matches.length;
-						while (--i >= 0 && matches.item(i) !== el) {};
-					} while ((i < 0) && (el = el.parentElement));
-					return el;
-				};
-			}
-
 			var elem = document.querySelector('#d3');
 
 			// Get closest parent with a [data-sandwich] attribute
@@ -83,6 +69,10 @@
 			// Get closest parent with a .wrapper class
 			var wrapper = elem.closest('.wrapper');
 			console.log(wrapper);
+
+			// Get the first element with the [data-snack] attribute
+			var snack = elem.closest('[data-snack]');
+			console.log(snack);
 		</script>
 	</body>
 </html>

@@ -29,13 +29,17 @@
 
 	<body>
 
-		<div id="some-element"><h1>Hello, world!</h1></div>
+		<ul id="some-element">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
 
 		<!-- Scripts -->
 		<script>
 			// Create a new element
-			var newNode = document.createElement('div');
-			newNode.innerHTML = 'I am new here!';
+			var newNode = document.createElement('li');
+			newNode.textContent = 'I am new here!';
 
 			// Get the reference node
 			var referenceNode = document.querySelector('#some-element');

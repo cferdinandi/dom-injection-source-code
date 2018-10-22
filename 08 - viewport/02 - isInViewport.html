@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>pageYOffset</title>
+		<title>isInViewport()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Styles -->
@@ -26,22 +26,32 @@
 
 		<!-- Scripts -->
 		<script>
-			// On scroll, log the current scroll position
-			var timeout;
+			/*!
+			 * Determine if an element is in the viewport
+			 * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+			 * @param  {Node}    elem The element
+			 * @return {Boolean}      Returns true if element is in the viewport
+			 */
+			var isInViewport = function (elem) {
+				var distance = elem.getBoundingClientRect();
+				return (
+					distance.top >= 0 &&
+					distance.left >= 0 &&
+					distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+					distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+				);
+			};
+
+			// The element to check
+			var elem = document.querySelector('#find-me');
+
+			// On scroll, check to see if our element is in the viewport
 			window.addEventListener('scroll', function (event) {
-				// If timer is null, reset it to 66ms and run your functions.
-				// Otherwise, wait until timer is cleared
-				if (!timeout) {
-					timeout = setTimeout(function() {
-
-						// Reset timeout
-						timeout = null;
-
-						// Log the current scroll position
-						var distance = window.pageYOffset;
-						console.log(distance);
-
-					}, 66);
+				// Run our resize functions
+				if (isInViewport(elem)) {
+					console.log('In the viewport!');
+				} else {
+					console.log('No yet... =(');
 				}
 			}, false);
 		</script>

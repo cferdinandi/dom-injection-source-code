@@ -43,11 +43,11 @@
 
 		<!-- Scripts -->
 		<script>
-			 // Get divs with a [data-snack] attribute of chips
-			console.log(document.querySelectorAll('div'));
-
-			// Run event after DOM is ready
-			// @param  {Function} fn Callback function
+			/*!
+			 * Run event after DOM is ready
+			 * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+			 * @param  {Function} fn Callback function
+			 */
 			var ready = function (fn) {
 
 				// Sanity check
@@ -62,6 +62,9 @@
 				document.addEventListener('DOMContentLoaded', fn, false);
 
 			};
+
+			 // Get divs with a [data-snack] attribute of chips
+			console.log(document.querySelectorAll('div'));
 
 			// Example
 			ready(function() {

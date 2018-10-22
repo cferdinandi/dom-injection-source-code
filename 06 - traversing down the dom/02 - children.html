@@ -45,38 +45,31 @@
 
 		<div class="wrapper">
 			.wrapper
-			<div class="bg-blue" id="d" data-sandwich="ham">
-				.bg-blue #d [data-sandwich="ham"]
+			<div class="bg-blue" id="app" data-sandwich="ham">
+				.bg-blue #app [data-sandwich="ham"]
 
 				<div class="bg-navy" id="d1" data-snack="chips">.bg-navy #da [data-snack="chips"]</div>
 
 				<div class="bg-navy" id="d2" data-snack="carrots">.bg-navy #db [data-snack="carrots"]</div>
 
 				<div class="bg-red" id="d3" data-snack="chips">.bg-red #dc [data-snack="chips"]</div>
+
+				Some random words.
 			</div>
 		</div>
 
 
 		<!-- Scripts -->
 		<script>
-			// Get all child nodes
+			// Get immediate descendant elements of .wrapper
 			var wrapper = document.querySelector('.wrapper');
 			var wrapperChildren = wrapper.children;
 			console.log(wrapperChildren);
 
-			// Get all child nodes
-			var elem = document.querySelector('#d');
+			// Get immediate descendant elements of #app
+			var elem = document.querySelector('#app');
 			var elemChildren = elem.children;
 			console.log(elemChildren);
-
-			// Filter child nodes by type
-			var filtered = [];
-			for (var i = 0; i < elemChildren.length; i++) {
-				if (elemChildren[i].tagName && elemChildren[i].tagName.toLowerCase() === 'div') {
-					filtered.push(elemChildren[i]);
-				}
-			}
-			console.log(filtered);
 		</script>
 	</body>
 </html>
