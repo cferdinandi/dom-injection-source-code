@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Element.querySelector() & Element.querySelectorAll()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="heroes">
+			<ul>
+				<li>Spiderman</li>
+				<li>Wolverine</li>
+				<li>Captain Planet</li>
+			</ul>
+		</div>
+
+		<div class="wizards">
+			<ul>
+				<li>Gandalf</li>
+				<li>Radagast</li>
+				<li>Hermione</li>
+				<li>Neville</li>
+			</ul>
+		</div>
+
+		<script>
+			let wizards = document.querySelector('.wizards');
+
+			// Find the first li element inside `.wizards`
+			let gandalf = wizards.querySelector('li');
+			console.log(gandalf);
+
+			// Find all li elements inside `.wizards`
+			let allWizards = wizards.querySelectorAll('li');
+			console.log(allWizards);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Node.cloneNode()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="app" class="background" data-app>
+			<h1>Hello, world!</h1>
+			<p>How are you today?</p>
+			Nice to see you again.
+		</div>
+
+
+		<script>
+			// Get the element to clone
+			let app = document.querySelector('#app');
+
+			// Create a shallow clone
+			let clone = app.cloneNode();
+			console.log(clone);
+
+			// Create a deep clone
+			let deepClone = app.cloneNode(true);
+			console.log(deepClone);
+		</script>
+	</body>
+</html>

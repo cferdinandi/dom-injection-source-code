@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>ParentNode.append()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul id="list">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+
+
+		<script>
+			// Create a new element
+			let li = document.createElement('li');
+			li.textContent = 'I am new here.';
+
+			// Get the parent node
+			let list = document.querySelector('#list');
+
+			// Insert the new node after the last element in the parent node
+			list.append(li);
+
+
+			// Create another new element
+			let liToo = document.createElement('li');
+			liToo.textContent = `I'm new, too!`;
+
+			// You can inject more than one item by passing in multiple arguments
+			list.append(li, liToo);
+		</script>
+	</body>
+</html>

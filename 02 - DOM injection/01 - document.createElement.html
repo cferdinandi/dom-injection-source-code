@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>document.createElement()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<script>
+			let div = document.createElement('div');
+			console.log(div);
+
+			let link = document.createElement('a');
+			console.log(link);
+
+			let article = document.createElement('article');
+			console.log(article);
+
+			let chicken = document.createElement('chicken');
+			console.log(chicken);
+
+			let placeholder = document.createElement('_');
+			console.log(placeholder);
+
+			// Add attributes
+			div.textContent = 'Hello, world!';
+			div.className = 'new-div';
+			div.id = 'new-div';
+			div.setAttribute('data-div', 'new');
+			div.style.color = '#fff';
+			div.style.backgroundColor = 'rebeccapurple';
+		</script>
+	</body>
+</html>

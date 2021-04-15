@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Node.children</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="wizards">
+			<ul>
+				<li>Gandalf</li>
+				<li>Radagast</li>
+				<li>Hermione</li>
+				<li>Neville</li>
+			</ul>
+		</div>
+
+		<script>
+			let wizards = document.querySelector('.wizards');
+			let wizardDescendants = wizards.children;
+			console.log(wizardDescendants);
+
+			let wizardsList = document.querySelector('.wizards ul');
+			let wizardListDescendants = wizardsList.children;
+			console.log(wizardListDescendants);
+
+			let li = document.createElement('li');
+			li.textContent = 'Merlin';
+			wizardsList.append(li);
+			console.log(wizardListDescendants);
+		</script>
+	</body>
+</html>

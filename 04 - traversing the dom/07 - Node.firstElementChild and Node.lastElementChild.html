@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Node.firstElementChild and Node.lastElementChild</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul>
+			<!-- The gray wizard -->
+			<li>Gandalf</li>
+			<li>Radagast</li>
+			<li>Hermione</li>
+			<!-- The surprise hero -->
+			<li>Neville</li>
+		</ul>
+
+		<script>
+			let wizards = document.querySelector('ul');
+
+			let firstDescendant = wizards.firstElementChild;
+			console.log(firstDescendant);
+
+			let lastDescendant = wizards.lastElementChild;
+			console.log(lastDescendant);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Node.replaceWith()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Good evening</h1>
+
+
+		<script>
+			// Get the target element
+			let h1 = document.querySelector('h1');
+
+			// Create a new element
+			let p = document.createElement('p');
+			p.textContent = 'Good morning';
+
+			// Replace the target with the new element
+			// h1.replaceWith(p);
+
+			// You can replace it with more than one item by passing in multiple arguments
+			h1.replaceWith(p, 'How are you today?');
+		</script>
+	</body>
+</html>

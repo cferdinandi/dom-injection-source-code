@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Node.nextElementSibling and Node.previousElementSibling</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul>
+			<!-- The gray wizard -->
+			<li>Gandalf</li>
+			<li>Radagast</li>
+			<li id="hermione">Hermione</li>
+			<!-- The surprise hero -->
+			<li>Neville</li>
+		</ul>
+
+		<script>
+			let hermione = document.querySelector('#hermione');
+
+			let next = hermione.nextElementSibling;
+			console.log(next);
+
+			let previous = hermione.previousElementSibling;
+			console.log(previous);
+		</script>
+	</body>
+</html>

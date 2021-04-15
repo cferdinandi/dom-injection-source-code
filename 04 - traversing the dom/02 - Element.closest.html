@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Element.closest()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<main>
+			<div class="hero">
+				<div id="app">
+					<h1 data-sandwich>Hello, world!</h1>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			let h1 = document.querySelector('h1');
+
+			let hero = h1.closest('.hero');
+			console.log(hero);
+
+			let sandwich = h1.closest('[data-sandwich]');
+			console.log(sandwich);
+
+			let sandwich2 = h1.parentNode.closest('[data-sandwich]');
+			console.log(sandwich2);
+		</script>
+	</body>
+</html>
